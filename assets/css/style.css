@@ -1,7 +1,7 @@
 :root {
     --bg-dark: #121212; /* Very dark grey for background */
     --bg-card: #1e1e1e; /* Slightly lighter dark grey for cards */
-    --primary: #4a90e2; /* Muted blue for primary accent */
+    --primary: #2f4f82; /* Darker blue for primary accent */
     --secondary: #8e8e8e; /* Medium grey for secondary accent */
     --text-gray: #b0b0b0;
     --white: #ffffff;
