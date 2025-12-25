@@ -80,6 +80,10 @@
 
         </nav>
 
+    <!-- Welcome audio element + play button -->
+    <audio id="welcome-audio" src="assets/sound/info.mp3" preload="auto"></audio>
+    <button id="play-welcome" class="play-welcome-btn" aria-label="Play welcome message">🔊 Play Welcome</button>
+
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-background-shape"></div>
@@ -645,6 +649,23 @@ window.addEventListener("scroll", () => {
 });
 </script>
 
+<script>
+  window.addEventListener("load", function () {
+    const text = `
+      Hi, welcome to my portfolio.
+      My name is Mohamed Abdelmonem.
+      I am a backend developer, and I love building clean and scalable web applications.
+      Feel free to explore my projects, and let's connect.
+    `;
+
+    const msg = new SpeechSynthesisUtterance(text);
+    msg.lang = "en-US";
+    msg.rate = 1;   // سرعة الصوت
+    msg.pitch = 1;  // نغمة الصوت
+
+    speechSynthesis.speak(msg);
+  });
+</script>
 
 </body>
 </html>   

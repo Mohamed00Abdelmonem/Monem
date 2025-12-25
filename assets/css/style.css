@@ -1445,3 +1445,24 @@ a:hover {
   opacity: 1;
   pointer-events: auto;
 }
+
+/* --- Welcome play button --- */
+.play-welcome-btn {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  z-index: 1100;
+  background: linear-gradient(90deg, rgba(74,144,226,1), rgba(142,142,142,1));
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 12px;
+  font-weight: 600;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform .15s ease, opacity .2s ease;
+}
+.play-welcome-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+} 
