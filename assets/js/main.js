@@ -24,4 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.transition = 'all 0.6s ease';
         observer.observe(card);
     });
+
+    // Floating WhatsApp Button scroll listener
+    window.addEventListener("scroll", () => {
+      const btn = document.getElementById("whatsapp-btn");
+      if (window.scrollY > 200) {
+        btn.classList.add("show");
+      } else {
+        btn.classList.remove("show");
+      }
+    });
 });

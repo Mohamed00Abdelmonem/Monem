@@ -1419,3 +1419,29 @@ a:hover {
         transform: translateY(0);
     }
 }
+
+/* --- Floating WhatsApp Button --- */
+#whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background: #73abb5ff;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+  transition: .3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#whatsapp-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
