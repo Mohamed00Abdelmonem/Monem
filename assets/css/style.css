@@ -817,97 +817,88 @@ a:hover {
 }
 
 .project-card {
-    background-color: var(--bg-card); /* Consistent card background */
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.95) 0%, rgba(47, 79, 130, 0.1) 100%);
+    backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(79, 156, 255, 0.2);
+    border-radius: 16px;
     overflow: hidden;
-    transition: all 0.5s ease;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
     height: 100%;
     position: relative;
     z-index: 1;
-    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%); /* Consistent subtle skew */
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
-    transform: translateY(-15px) scale(1.03);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
-    border-color: var(--primary); /* Highlight with primary color on hover */
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(79, 156, 255, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-color: rgba(79, 156, 255, 0.5);
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.98) 0%, rgba(47, 79, 130, 0.2) 100%);
 }
 
 .project-card .card-img-top {
     width: 100%;
-    height: 280px; /* Increased height for images */
+    height: 240px;
     object-fit: cover;
-    border-radius: 20px 20px 0 0;
-    filter: grayscale(60%) brightness(0.8); /* More pronounced initial effect */
-    transition: filter 0.6s, transform 0.6s ease;
+    border-radius: 0;
+    filter: grayscale(50%) brightness(0.85);
+    transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     z-index: 2;
 }
 
-.project-card .card-img-top::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(74, 144, 226, 0.4), transparent 50%); /* Primary color overlay */
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: 3;
-}
-
 .project-card:hover .card-img-top {
-    filter: grayscale(0%) brightness(1);
-    transform: scale(1.08); /* More significant zoom on hover */
-}
-
-.project-card:hover .card-img-top::before {
-    opacity: 1;
+    filter: grayscale(0%) brightness(1.05);
+    transform: scale(1.05);
 }
 
 .project-card .card-body {
-    padding: 35px;
+    padding: 28px 24px;
     position: relative;
     z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card .card-title {
     color: var(--white);
-    font-weight: 700;
-    margin-bottom: 15px;
-    font-size: 1.7rem;
-    background: -webkit-linear-gradient(left, var(--white), var(--secondary));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 1.35rem;
+    transition: color 0.3s ease;
+}
+
+.project-card:hover .card-title {
+    color: rgba(79, 156, 255, 1);
 }
 
 .project-card .card-text {
     color: var(--text-gray);
-    font-size: 1.05rem;
-    margin-bottom: 30px;
-    line-height: 1.8;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    flex: 1;
 }
 
 /* Buttons within cards */
 .project-card .btn-primary-gradient {
-    font-size: 1rem;
-    padding: 13px 28px;
-    border-radius: 35px;
-    box-shadow: 0 5px 20px rgba(74, 144, 226, 0.4); /* Primary glow */
+    font-size: 0.9rem;
+    padding: 11px 26px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(79, 156, 255, 0.25);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: auto;
 }
 
 .project-card .btn-primary-gradient:hover {
-    box-shadow: 0 8px 25px rgba(142, 142, 142, 0.6); /* Secondary glow on hover */
-    transform: translateY(-4px) scale(1.03);
-    opacity: 0.95;
+    box-shadow: 0 8px 25px rgba(79, 156, 255, 0.5);
+    transform: translateY(-3px);
 }
 
 /* Responsive adjustments for Projects Section */

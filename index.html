@@ -422,8 +422,8 @@
             <!-- Card 2 -->
             <div class="col-sm-12 col-md-6 col-lg-4" data-category="backend">
                 <div class="card project-card h-100">
-                    <img src="assets/images/projects/graduation.png"  width="400" 
-  height="200"  class="project-img" alt="Graduation Project">
+                    <img src="assets/images/projects/projects/gradition2.png"   
+  height="300"  class="project-img" alt="Graduation Project">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Graduation Project</h5>
                         <p class="card-text mb-3">Capstone graduation project repository with documentation and deployment notes.</p>
@@ -464,8 +464,8 @@
             <!-- Card 3 -->
             <div class="col-sm-12 col-md-6 col-lg-4" data-category="fullstack">
                 <div class="card project-card h-100">
-                    <img src="assets/images/projects/online-cousrse.png" width="400" 
-  height="200"  class="project-img" alt="Online Courses Platform">
+                    <img src="assets/images/projects/projects/edu3.png" width="450" 
+                    height="250"  class="project-img" alt="Online Courses Platform">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Online Courses Platform</h5>
                         <p class="card-text mb-3">An online courses platform built with Django, featuring course management and video lessons.</p>
@@ -475,7 +475,7 @@
                             <span class="badge">Django</span>
                         </div>
 
-                        <a href="https://github.com/Mohamed00Abdelmonem/Dj-Online-Courses" target="_blank" rel="noopener" class="btn btn-primary-gradient mt-auto">View Project</a>
+                        <a href="https://ium-lms.fakehtech.com/" target="_blank" rel="noopener" class="btn btn-primary-gradient mt-auto">View Project</a>
                     </div>
                 </div>
             </div>
@@ -484,7 +484,7 @@
             <div class="col-sm-12 col-md-6 col-lg-4" data-category="frontend">
                 <div class="card project-card h-100">
                     <img src="assets/images/projects/tnzeem.png"  width="400" 
-  height="200"  class="project-img" alt="Tnzeem Website">
+                    height="200"  class="project-img" alt="Tnzeem Website">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Tnzeem Website</h5>
                         <p class="card-text mb-3">Live company website for Tnzeem. Visit the live site to see the deployed project.</p>
@@ -523,14 +523,13 @@
             <div class="col-sm-12 col-md-6 col-lg-4" data-category="backend">
                 <div class="card project-card h-100">
                         <img 
-                        src="assets/images/projects/realstate.png" 
+                        src="assets/images/projects/projects/ray3.png" 
                         class="project-img" 
-                        width="400" 
                         height="200"  
                         alt="Real Estate Project"
                         />
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Real Estate</h5>
+                        <h5 class="card-title">Ray</h5>
                         <p class="card-text mb-3">Real estate listing platform built with Django; includes search and listing features.</p>
 
                         <div class="project-badges mb-3">
@@ -539,7 +538,7 @@
                             <span class="badge">DRF</span>
                         </div>
 
-                        <a href="https://github.com/Mohamed00Abdelmonem/Dj-Real-Estate" target="_blank" rel="noopener" class="btn btn-primary-gradient mt-auto">View Project</a>
+                        <a href="http://rayconstraction.com/" target="_blank" rel="noopener" class="btn btn-primary-gradient mt-auto">View Project</a>
                     </div>
                 </div>
             </div>
@@ -551,20 +550,19 @@
 
         <style>
         /* Projects layout and card styling */
-        #projects .project-card { border: none; border-radius: .75rem; overflow: hidden; box-shadow: 0 8px 24px rgba(18,38,63,0.06); transition: transform .25s ease, box-shadow .25s ease, opacity .25s ease; }
-        #projects .project-card:hover { transform: translateY(-8px) scale(1.01); box-shadow: 0 18px 40px rgba(18,38,63,0.12); }
-        /* #projects .project-img { width:100%; height:200px; object-fit:cover; display:block; } */
-        #projects .card-body { padding: 1.25rem; }  
-        #projects .project-badges .badge { background: rgba(68, 115, 191, 0.08); color: #2a5199; margin-right: 6px; padding: .35rem .55rem; border-radius: .5rem; }
+        #projects .project-card { border: none; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.4); transition: all .4s cubic-bezier(0.4, 0, 0.2, 1); }
+        #projects .project-card:hover { transform: translateY(-12px); box-shadow: 0 20px 50px rgba(79, 156, 255, 0.3); }
+        #projects .card-body { padding: 28px 24px; display: flex; flex-direction: column; }  
+        #projects .project-badges { margin-bottom: 20px; }
+        #projects .project-badges .badge { background: linear-gradient(135deg, rgba(79, 156, 255, 0.15) 0%, rgba(79, 156, 255, 0.05) 100%); color: rgba(79, 156, 255, 0.9); margin-right: 8px; margin-bottom: 6px; padding: 0.4rem 0.7rem; border-radius: 6px; font-size: 0.8rem; font-weight: 500; border: 1px solid rgba(79, 156, 255, 0.2); display: inline-block; }
+        #projects .project-badges .badge:hover { background: rgba(79, 156, 255, 0.2); }
         #project-filters { gap: .5rem; }
-        #project-filters .filter-btn { border-radius: 999px; padding: .45rem .85rem; transition: transform .12s ease, box-shadow .12s ease, background .12s, color .12s; cursor: pointer; }
-        #project-filters .filter-btn:hover { transform: translateY(-3px); }
+        #project-filters .filter-btn { border-radius: 999px; padding: .5rem 1rem; transition: all .3s ease; cursor: pointer; border: 1.5px solid rgba(79, 156, 255, 0.3); font-weight: 500; }
+        #project-filters .filter-btn:hover { transform: translateY(-3px); border-color: rgba(79, 156, 255, 0.6); }
         #project-filters .filter-btn:active { transform: translateY(0) scale(.98); }
-        #project-filters .filter-btn:focus { outline: 3px solid rgba(74, 101, 165, 0.18); outline-offset: 3px; }
-        #project-filters .filter-btn.active { background: linear-gradient(90deg,#2f4f82,#2e3a56); color: #fff; border-color: transparent; box-shadow: 0 8px 18px rgba(47,79,130,0.18); transform: translateY(-4px) scale(1.02); }
+        #project-filters .filter-btn:focus { outline: 3px solid rgba(79, 156, 255, 0.3); outline-offset: 3px; }
+        #project-filters .filter-btn.active { background: linear-gradient(135deg, rgba(79, 156, 255, 0.2) 0%, rgba(79, 156, 255, 0.05) 100%); color: rgba(79, 156, 255, 1); border-color: rgba(79, 156, 255, 0.5); box-shadow: 0 8px 20px rgba(79,156,255,0.25); transform: translateY(-4px); }
         .project-grid .col-sm-12 { transition: opacity .25s ease, transform .25s ease; }
-        /* @media (max-width:767px) { #projects .project-img { height:160px; } } */
-        /* @media (min-width:1400px) { #projects .project-img { height:220px; } } */
         </style> 
 
         <script>
