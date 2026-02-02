@@ -78,15 +78,6 @@
 
         </nav>
 
-    <!-- Welcome audio element + play button -->
-    <audio id="welcome-audio" src="assets/sound/info.mp3" preload="auto"></audio>
-    <button id="play-welcome" class="play-welcome-btn" aria-label="Play welcome message">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-        <path d="M5 9V15H9L14 20V4L9 9H5Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M16 9.5C16.83 10.33 17.33 11.5 17.33 12.75C17.33 14 16.83 15.17 16 16" stroke="#4f9cff" stroke-width="2" stroke-linecap="round"/>
-        <path d="M18.5 7C20.17 8.67 21 10.67 21 12.75C21 14.83 20.17 16.83 18.5 18.5" stroke="#4f9cff" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-    </button>
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -119,57 +110,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about-section container" id="about">
-        <div class="section-header">
-            <span class="sub-title">Who I am</span>
-            <h2 class="main-title">About My Resume</h2>
-        </div>
-
-        <div class="about-content-wrapper">
-            <div class="row g-4">
-                <!-- Left: Info List -->
-                <div class="col-lg-5">
-                    <div class="about-info-card">
-                        <div class="info-row">
-                            <div class="info-label">Age:</div>
-                            <div class="info-value">22</div>
-                        </div>
-                        <div class="info-row">
-                            <div class="info-label">Residence:</div>
-                            <div class="info-value">Egypt</div>
-                        </div>
-                        <div class="info-row">
-                            <div class="info-label">Address:</div>
-                            <div class="info-value">Mansoura, Egypt</div>
-                        </div>
-                        
-                        <div class="info-row">
-                            <div class="info-label">Phone:</div>
-                            <div class="info-value"><a href="https://wa.me/201026120743" target="_blank" rel="noopener">+201026120743</a></div>
-                        </div>
-                        <div class="info-row">
-                            <div class="info-label">Freelance:</div>
-                            <div class="info-value available">Available</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right: Context Image -->
-                <div class="col-lg-7">
-                    <div class="about-image-wrapper">
-                        <img src="assets/images/about.jpeg" alt="Team Meeting" class="about-img">
-                    </div>
-                </div>
-            </div>
-            <!-- Download CV Button centered below the row -->
-            <div class="text-center mt-5">
-                <a href="https://drive.google.com/file/d/1Q7QqAAVcWfvh2WDjk277Ay5gvGUprie8/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary-gradient">
-                    <i class="fas fa-download me-2"></i>Download CV
-                </a>
-            </div>
-        </div>
-    </section>
+   
 
     <!-- Services Section -->
     <section class="services-section container" id="services">
@@ -214,7 +155,7 @@
             <!-- Backend & Core -->
             <div class="col-lg-4">
                 <div class="skills-list-wrapper">
-                    <h4 class="skill-category">🐍 Backend &amp; Core</h4>
+                    <h4 class="skill-category"> Backend &amp; Core</h4>
                     <div class="skill-item">
                         <div class="skill-info">
                             <span class="skill-label">Python</span>
@@ -266,7 +207,7 @@
             <!-- DevOps / Deployment -->
             <div class="col-lg-4">
                 <div class="skills-list-wrapper">
-                    <h4 class="skill-category">🧰 DevOps / Deployment</h4>
+                    <h4 class="skill-category"> DevOps / Deployment</h4>
                     <div class="skill-item">
                         <div class="skill-info">
                             <span class="skill-label">Docker</span>
@@ -309,7 +250,7 @@
             <!-- Frontend -->
             <div class="col-lg-4">
                 <div class="skills-list-wrapper">
-                    <h4 class="skill-category">🎨 Frontend</h4>
+                    <h4 class="skill-category"> Frontend</h4>
                     <div class="skill-item">
                         <div class="skill-info">
                             <span class="skill-label">HTML / CSS</span>
@@ -379,21 +320,36 @@
             <div class="col-lg-6">
                 <h3 class="resume-category-title">Experience</h3>
                 <div class="resume-item">
-                    <span class="resume-date">📅 Oct 2025 – Present</span>
-                    <h4 class="resume-title">Trainee — 9-Month Professional Training Program (Open Source Track)</h4>
-                    <p class="resume-company">Information Technology Institute (ITI) — Full-time</p>
-                    <p class="resume-description">📍 El Mansoura, Ad Daqahliyah, Egypt — On-site</p>
+                    <div class="d-flex align-items-start">
+                        <img src="assets/images/iti.png" alt="ITI Logo" class="company-logo me-3">
+                        <div class="flex-grow-1">
+                            <span class="resume-date"> Oct 2025 – Present</span>
+                            <h4 class="resume-title">Trainee — 9-Month Professional Training Program (Open Source Track)</h4>
+                            <p class="resume-company">Information Technology Institute (ITI) — Full-time</p>
+                            <p class="resume-description">📍 El Mansoura, Ad Daqahliyah, Egypt — On-site</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="resume-item">
-                    <span class="resume-date">📅 January 2025 – March 2025</span>
-                    <h4 class="resume-title">Backend Developer — Tnzeem</h4>
-                    <p class="resume-company">Full-time — On-site</p>
-                    <p class="resume-description">Worked on backend features, handled data, and supported production systems.</p>
+                    <div class="d-flex align-items-start">
+                        <img src="assets/images/DSD.png" alt="Tnzeem Logo" class="company-logo me-3">
+                        <div class="flex-grow-1">
+                            <span class="resume-date"> January 2025 – March 2025</span>
+                            <h4 class="resume-title">Backend Developer — Tnzeem</h4>
+                            <p class="resume-company">Full-time — On-site</p>
+                            <p class="resume-description">Worked on backend features, handled data, and supported production systems.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="resume-item">
-                    <span class="resume-date">📅 2022 – 2024</span>
-                    <h4 class="resume-title">Python Developer — Code4Learn (Bootcamp)</h4>
-                    <p class="resume-description">Hands-on practice building projects using Python &amp; Django.</p>
+                    <div class="d-flex align-items-start">
+                        <img src="assets/images/cod4learn.png" alt="Code4Learn Logo" class="company-logo me-3">
+                        <div class="flex-grow-1">
+                            <span class="resume-date"> 2022 – 2024</span>
+                            <h4 class="resume-title">Python Developer — Code4Learn (Bootcamp)</h4>
+                            <p class="resume-description">Hands-on practice building projects using Python &amp; Django.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
