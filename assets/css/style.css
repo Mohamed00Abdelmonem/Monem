@@ -351,18 +351,20 @@ a:hover {
 
 .hero-img {
     width: 100%;
-    max-width: 550px;
-    border-radius: 25px;
-    filter: grayscale(20%) contrast(110%);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    transform: rotate(-7deg); /* More dynamic initial rotation */
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    border: 3px solid var(--secondary);
+    max-width: 460px;
+    border-radius: 24px;
+    filter: grayscale(15%) contrast(108%);
+    box-shadow: 0 20px 42px rgba(0, 0, 0, 0.38);
+    transform: rotate(-5deg);
+    transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.55s ease, box-shadow 0.55s ease;
+    border: 3px solid rgba(142, 142, 142, 0.75);
+    animation: heroFloat 3.2s ease-in-out infinite;
 }
 
 .hero-img:hover {
-    transform: rotate(0deg) scale(1.03);
+    transform: rotate(0deg) scale(1.08);
     filter: grayscale(0%) contrast(100%);
+    box-shadow: 0 28px 58px rgba(0, 0, 0, 0.52);
 }
 
 /* Keyframe Animations */
@@ -375,6 +377,11 @@ a:hover {
 @keyframes rotateShape {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@keyframes heroFloat {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-12px) rotate(-5deg); }
 }
 
 /* Responsive adjustments for Hero Section */
@@ -405,9 +412,16 @@ a:hover {
         opacity: 0.1;
     }
     .hero-img {
+        max-width: 340px;
         transform: rotate(0deg); /* No rotation on mobile */
         border-width: 2px;
+        animation: heroFloatMobile 3.2s ease-in-out infinite;
     }
+}
+
+@keyframes heroFloatMobile {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-6px) rotate(0deg); }
 }
 /* --- About Section --- */
 .about-section {
@@ -820,16 +834,16 @@ a:hover {
 }
 
 .project-card {
-    background: linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(25, 25, 25, 0.95) 100%);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 16px;
+    background: linear-gradient(160deg, rgba(18, 18, 18, 0.95) 0%, rgba(30, 30, 30, 0.95) 100%);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 22px;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.6),
-        0 0 0 1px rgba(255, 255, 255, 0.05),
-        inset 0 1px 0 rgba(255, 255, 255, 0.02);
+        0 14px 34px rgba(0, 0, 0, 0.45),
+        0 0 0 1px rgba(255, 255, 255, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
     height: 100%;
     position: relative;
     z-index: 1;
@@ -838,39 +852,39 @@ a:hover {
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
     box-shadow: 
-        0 20px 50px rgba(0, 0, 0, 0.8),
-        0 0 0 1px rgba(79, 156, 255, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.05);
-    border-color: rgba(79, 156, 255, 0.2);
-    background: linear-gradient(135deg, rgba(20, 20, 20, 0.98) 0%, rgba(30, 30, 30, 0.98) 100%);
+        0 22px 55px rgba(0, 0, 0, 0.65),
+        0 0 0 1px rgba(79, 156, 255, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    border-color: rgba(79, 156, 255, 0.28);
+    background: linear-gradient(160deg, rgba(22, 22, 22, 0.98) 0%, rgba(33, 33, 33, 0.98) 100%);
 }
 
 .project-img {
     width: 100%;
-    height: 240px;
+    height: 220px;
     object-fit: cover;
     border-radius: 0;
-    filter: brightness(0.7) contrast(1.1);
+    filter: brightness(0.82) contrast(1.05);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     z-index: 2;
 }
 
 .project-card:hover .project-img {
-    filter: brightness(0.85) contrast(1.2);
+    filter: brightness(0.92) contrast(1.12);
     transform: scale(1.05);
 }
 
 .project-card .card-body {
-    padding: 30px 25px;
+    padding: 26px 22px;
     position: relative;
     z-index: 1;
     flex: 1;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0.34) 100%);
 }
 
 .project-card .card-title {
@@ -934,11 +948,11 @@ a:hover {
 
 /* Filter buttons styling */
 .filter-btn {
-    background: rgba(30, 30, 30, 0.8);
-    border: 1px solid rgba(79, 156, 255, 0.3);
+    background: rgba(30, 30, 30, 0.75);
+    border: 1px solid rgba(79, 156, 255, 0.22);
     color: var(--text-gray);
     padding: 10px 20px;
-    border-radius: 25px;
+    border-radius: 999px;
     font-weight: 500;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
@@ -1144,6 +1158,129 @@ a:hover {
     }
     .resume-title {
         font-size: 1.5rem;
+    }
+}
+
+/* --- Certificates Section --- */
+.certificates-section {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.certificate-carousel {
+    max-width: 780px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.certificate-slide {
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.98) 0%, rgba(35, 35, 35, 0.98) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 14px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+    animation: certificateFloat 6s ease-in-out infinite;
+}
+
+.certificate-image {
+    width: 100%;
+    max-height: 460px;
+    object-fit: contain;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.03);
+    transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.carousel-item.active .certificate-image {
+    transform: scale(1.01);
+    filter: brightness(1.03) contrast(1.03);
+}
+
+.certificate-slide:hover .certificate-image {
+    transform: scale(1.03);
+}
+
+.certificates-section .carousel-indicators {
+    bottom: -42px;
+}
+
+.certificates-section .carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.35);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.certificates-section .carousel-indicators .active {
+    background-color: var(--primary);
+    transform: scale(1.15);
+}
+
+.certificates-section .carousel-control-prev,
+.certificates-section .carousel-control-next {
+    width: 11%;
+}
+
+.certificates-section .carousel-control-prev-icon,
+.certificates-section .carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: rgba(18, 18, 18, 0.8);
+    background-size: 1.3rem 1.3rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.certificates-section .carousel-control-prev:hover .carousel-control-prev-icon,
+.certificates-section .carousel-control-next:hover .carousel-control-next-icon {
+    transform: scale(1.08);
+    background-color: rgba(47, 79, 130, 0.9);
+}
+
+.certificate-pdf-link {
+    margin-top: 28px;
+}
+
+@keyframes certificateFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 991px) {
+    .certificates-section {
+        padding: 80px 0;
+    }
+
+    .certificate-slide {
+        padding: 12px;
+        border-radius: 18px;
+    }
+
+    .certificate-image {
+        max-height: 400px;
+        border-radius: 12px;
+    }
+
+    .certificates-section .carousel-control-prev-icon,
+    .certificates-section .carousel-control-next-icon {
+        width: 2.55rem;
+        height: 2.55rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .certificates-section .carousel-control-prev,
+    .certificates-section .carousel-control-next {
+        width: 18%;
+    }
+
+    .certificate-image {
+        max-height: 320px;
     }
 }
 
