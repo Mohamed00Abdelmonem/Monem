@@ -64,21 +64,15 @@
 
             <div class="container-fluid">
 
-                <div class="d-flex align-items-center gap-2">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
 
-                    <a href="https://drive.google.com/file/d/1Q7QqAAVcWfvh2WDjk277Ay5gvGUprie8/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary-gradient mobile-cv-btn d-lg-none">
-                        <i class="fas fa-file-arrow-down me-2"></i>CV
-                    </a>
+                    <span class="navbar-toggler-icon"></span>
 
+                </button>
 
-
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-
-                        <span class="navbar-toggler-icon"></span>
-
-                    </button>
-
-                </div>
+                <a href="https://drive.google.com/file/d/1Q7QqAAVcWfvh2WDjk277Ay5gvGUprie8/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary-gradient mobile-cv-btn d-lg-none ms-auto">
+                    <i class="fas fa-file-arrow-down me-2"></i>CV
+                </a>
 
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
 
@@ -671,10 +665,12 @@
         .project-nav:focus { outline: 3px solid rgba(79, 156, 255, 0.35); outline-offset: 3px; }
         .project-nav:disabled { opacity: 0.35; cursor: not-allowed; transform: none; }
         @media (max-width: 991px) {
-            .project-carousel-shell { grid-template-columns: 1fr; }
+            .project-carousel-shell { display: block; }
             .project-nav { display: none; }
-            .project-slide { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .project-carousel { display: block; }
+            .project-slide { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-bottom: 24px; }
             .project-showcase-header { align-items: start; flex-direction: column; }
+            .project-slide-indicators { display: none; }
         }
         @media (max-width: 575px) {
             .project-slide { grid-template-columns: 1fr; }
