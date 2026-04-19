@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monem</title>
+    <title>Mohamed Abdelmonem | Backend Developer Portfolio</title>
+    <meta name="description" content="Mohamed Abdelmonem (Monem / منعم / محمد عبدالمنعم) is a software engineer and backend developer building scalable Python and Django web applications.">
+    <meta name="keywords" content="Monem, منعم, مهندس برمجيات, محمد عبدالمنعم برمجه, عبدالمنعم, محمد عبدالمنعم, بايثون, دجانجو, Mohamed Abdelmonem, backend developer, Python developer, Django developer, DRF, PostgreSQL, Docker, software engineer, portfolio">
+    <meta name="author" content="Mohamed Abdelmonem">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#121212">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mohamed Abdelmonem Portfolio">
+    <meta property="og:title" content="Mohamed Abdelmonem | Backend Developer Portfolio">
+    <meta property="og:description" content="Explore Mohamed Abdelmonem's portfolio, backend engineering experience, skills, certifications, and recent projects.">
+    <meta property="og:image" content="assets/images/me.jpg">
+    <meta property="og:image:alt" content="Portrait of Mohamed Abdelmonem">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mohamed Abdelmonem | Backend Developer Portfolio">
+    <meta name="twitter:description" content="Backend developer portfolio with Python, Django, PostgreSQL, Docker, and production project experience.">
+    <meta name="twitter:image" content="assets/images/me.jpg">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Bootstrap 5 CSS -->
@@ -11,8 +27,25 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="assets/images/me.png"  href="assets/images/me.png">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="icon" type="image/png" href="assets/images/me.png">
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Mohamed Abdelmonem",
+            "alternateName": ["Monem", "منعم", "محمد عبدالمنعم", "عبدالمنعم"],
+            "jobTitle": "Backend Developer",
+            "description": "Backend developer and software engineer building scalable Python and Django web applications.",
+            "image": "assets/images/me.jpg",
+            "knowsLanguage": ["en", "ar"],
+            "knowsAbout": ["Python", "Django", "Django REST Framework", "PostgreSQL", "Docker", "Git", "GitHub", "React"],
+            "sameAs": [
+                "https://www.linkedin.com/in/mohamed-abdelmonem-716ba026b/",
+                "https://github.com/Mohamed00Abdelmonem"
+            ]
+        }
+        </script>
 
 </head>
 <body>
@@ -31,9 +64,8 @@
 
                 <div class="d-flex align-items-center">
 
-                    <a class="navbar-brand" href="#">
-
-
+                    <a class="navbar-brand" href="#home" aria-label="Mohamed Abdelmonem home">
+                        Mohamed Abdelmonem
                     </a>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -48,7 +80,7 @@
 
                     <ul class="navbar-nav">
 
-                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
 
                         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
 
@@ -79,7 +111,7 @@
 
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" id="home">
         <div class="hero-background-shape"></div>
         <div class="hero-shape-1"></div>
         <div class="hero-shape-2"></div>
@@ -90,6 +122,7 @@
                     <p class="hello-text">Hello I'm</p>
                     <h1 class="name-text"> Mohamed Abdelmonem</h1>
                     <p class="role-text">Software Engineer & BackEnd Developer</p>
+                    <p class="hero-summary">I build scalable backend systems, REST APIs, and database-driven web applications with Python, Django, Django REST Framework, PostgreSQL, and Docker. Also known as Monem, منعم, and محمد عبدالمنعم, I help companies and clients looking for a مهندس برمجيات, بايثون, or دجانجو developer find the right profile.</p>
 
                     <!-- <a href="mailto:mmohamedabdelm@gmail.com" class="contact-info-link">mmohamedabdelm@gmail.com</a> -->
                     <!-- <p class="address-text">Egypt</p> -->
@@ -103,7 +136,7 @@
 
                 <!-- Right Image Content -->
                 <div class="col-lg-6 mt-5 mt-lg-0 text-center hero-img-container">
-                    <img src="assets/images/me.jpg" alt="your_image" class="hero-img">
+                    <img src="assets/images/me.jpg" alt="Portrait of Mohamed Abdelmonem" class="hero-img" fetchpriority="high">
                 </div>
             </div>
         </div>
@@ -305,7 +338,7 @@
                 <h3 class="resume-category-title">Education</h3>
                 <div class="resume-item">
                     <div class="d-flex align-items-start">
-                        <img src="assets/images/met.png" alt="MET University Logo" class="company-logo me-3">
+                        <img src="assets/images/met.png" alt="MET University logo" class="company-logo me-3" loading="lazy" decoding="async">
                         <div class="flex-grow-1">
                             <span class="resume-date"> 2021 – 2025</span>
                             <h4 class="resume-title">
@@ -325,7 +358,7 @@
                 <h3 class="resume-category-title">Experience</h3>
                 <div class="resume-item">
                     <div class="d-flex align-items-start">
-                        <img src="assets/images/iti.png" alt="ITI Logo" class="company-logo me-3">
+                        <img src="assets/images/iti.png" alt="Information Technology Institute logo" class="company-logo me-3" loading="lazy" decoding="async">
                         <div class="flex-grow-1">
                             <span class="resume-date"> Oct 2025 – Present</span>
                             <h4 class="resume-title">Trainee — 9-Month Professional Training Program (Open Source Track)</h4>
@@ -336,7 +369,7 @@
                 </div>
                 <div class="resume-item">
                     <div class="d-flex align-items-start">
-                        <img src="assets/images/DSD.png" alt="Tnzeem Logo" class="company-logo me-3">
+                        <img src="assets/images/DSD.png" alt="Tnzeem logo" class="company-logo me-3" loading="lazy" decoding="async">
                         <div class="flex-grow-1">
                             <span class="resume-date"> January 2025 – March 2025</span>
                             <h4 class="resume-title">Backend Developer — Tnzeem</h4>
@@ -347,7 +380,7 @@
                 </div>
                 <div class="resume-item">
                     <div class="d-flex align-items-start">
-                        <img src="assets/images/cod4learn.png" alt="Code4Learn Logo" class="company-logo me-3">
+                        <img src="assets/images/cod4learn.png" alt="Code4Learn logo" class="company-logo me-3" loading="lazy" decoding="async">
                         <div class="flex-grow-1">
                             <span class="resume-date"> 2022 – 2024</span>
                             <h4 class="resume-title">Python Developer — Code4Learn (Bootcamp)</h4>
@@ -381,7 +414,9 @@
                         <img 
                         src="assets/images/projects/projects/ray3.png" 
                         height="300"  
-                        alt="Real Estate Project"
+                        alt="Ray construction project screenshot"
+                        loading="lazy"
+                        decoding="async"
                         />
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Ray</h5>
@@ -401,7 +436,7 @@
             <div class="col-sm-12 col-md-6 col-lg-4" data-category="backend">
                 <div class="card project-card h-100">
                     <img src="assets/images/projects/projects/University%20of%20Minnesota.png" 
-                    height="300"  alt="University of Minnesota Project">
+                    height="300"  alt="University of Minnesota learning management system project" loading="lazy" decoding="async">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">University of Minnesota</h5>
 
@@ -419,7 +454,7 @@
             <div class="col-sm-12 col-md-6 col-lg-4" data-category="frontend">
                 <div class="card project-card h-100">
                     <img src="assets/images/projects/projects/tanzzem.png"   
-                    height="300"  alt="Tnzeem Website">
+                    height="300"  alt="Tnzeem website project screenshot" loading="lazy" decoding="async">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Tnzeem Website</h5>
 
@@ -437,7 +472,7 @@
             <div class="col-sm-12 col-md-6 col-lg-4" data-category="backend">
                 <div class="card project-card h-100">
                     <img src="assets/images/projects/projects/gradition2.png"   
-                    height="300"  alt="Graduation Project">
+                    height="300"  alt="Graduation project screenshot" loading="lazy" decoding="async">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Graduation Project</h5>
 
@@ -457,7 +492,7 @@
             <div class="col-sm-12 col-md-6 col-lg-4" data-category="backend">
                 <div class="card project-card h-100">
                     <img src="assets/images/projects/projects/e-commerce.png"  
-                    height="300"  alt="E-commerce">
+                    height="300"  alt="E-commerce project screenshot" loading="lazy" decoding="async">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">E-commerce</h5>
 
@@ -476,7 +511,7 @@
             <div class="col-sm-12 col-md-6 col-lg-4" data-category="backend">
                 <div class="card project-card h-100">
                     <img src="assets/images/projects/projects/abjadi2.png"  height="300" 
-                     alt="Abjadi Platform">
+                     alt="Abjadi platform project screenshot" loading="lazy" decoding="async">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Abjadi Platform</h5>
 
@@ -599,22 +634,22 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="certificate-slide">
-                        <img src="assets/certificate/Screenshot%202026-04-18%20182553.png" class="d-block w-100 certificate-image" alt="Certificate 1">
+                        <img src="assets/certificate/Screenshot%202026-04-18%20182553.png" class="d-block w-100 certificate-image" alt="Certificate showing training completion" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="certificate-slide">
-                        <img src="assets/certificate/Screenshot%202026-04-18%20182636.png" class="d-block w-100 certificate-image" alt="Certificate 2">
+                        <img src="assets/certificate/Screenshot%202026-04-18%20182636.png" class="d-block w-100 certificate-image" alt="Certificate showing technical achievement" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="certificate-slide">
-                        <img src="assets/certificate/Screenshot%202026-04-18%20182731.png" class="d-block w-100 certificate-image" alt="Certificate 3">
+                        <img src="assets/certificate/Screenshot%202026-04-18%20182731.png" class="d-block w-100 certificate-image" alt="Certificate showing professional training" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="certificate-slide">
-                        <img src="assets/images/certificate/java.png" class="d-block w-100 certificate-image" alt="Java Certificate">
+                        <img src="assets/images/certificate/java.png" class="d-block w-100 certificate-image" alt="Java certificate" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -655,7 +690,7 @@
 
 <!-- Footer -->
 <footer class="text-center py-4">
-    <p>&copy; 2024 Monem. All Rights Reserved.</p>
+    <p>&copy; 2026 Mohamed Abdelmonem. All Rights Reserved.</p>
 </footer>
 
 <!-- Bootstrap 5 JS Bundle -->
