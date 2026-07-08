@@ -1,0 +1,116 @@
+/* 
+ * Design System Variables 
+ * Professional SaaS Aesthetic - Dark Mode First
+ */
+
+:root {
+  /* Colors - Blue-Violet Palette */
+  --hue-primary: 250;
+  --hue-secondary: 230;
+
+  /* Dark Mode Default Palette */
+  --bg-primary: hsl(var(--hue-primary), 20%, 6%);
+  --bg-secondary: hsl(var(--hue-primary), 20%, 9%);
+  --bg-tertiary: hsl(var(--hue-primary), 20%, 12%);
+  --bg-glass: hsla(var(--hue-primary), 20%, 9%, 0.7);
+  --bg-glass-hover: hsla(var(--hue-primary), 20%, 12%, 0.8);
+
+  --text-primary: hsl(0, 0%, 98%);
+  --text-secondary: hsl(var(--hue-secondary), 15%, 70%);
+  --text-muted: hsl(var(--hue-secondary), 15%, 50%);
+
+  --accent-primary: hsl(var(--hue-primary), 80%, 65%);
+  --accent-primary-hover: hsl(var(--hue-primary), 80%, 70%);
+  --accent-secondary: hsl(var(--hue-secondary), 80%, 60%);
+
+  --border-color: hsl(var(--hue-primary), 20%, 18%);
+  --border-glass: hsla(0, 0%, 100%, 0.08);
+
+  /* Shadows */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 20px hsla(var(--hue-primary), 80%, 65%, 0.15);
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, monospace;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  /* Font Weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-32: 8rem;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Layout */
+  --max-width: 1200px;
+  --header-height: 4rem;
+}
+
+/* Light Mode Overrides */
+[data-theme="light"] {
+  --bg-primary: hsl(var(--hue-primary), 10%, 98%);
+  --bg-secondary: hsl(var(--hue-primary), 10%, 95%);
+  --bg-tertiary: hsl(var(--hue-primary), 10%, 90%);
+  --bg-glass: hsla(var(--hue-primary), 10%, 98%, 0.8);
+  --bg-glass-hover: hsla(var(--hue-primary), 10%, 95%, 0.9);
+
+  --text-primary: hsl(var(--hue-primary), 20%, 10%);
+  --text-secondary: hsl(var(--hue-secondary), 15%, 35%);
+  --text-muted: hsl(var(--hue-secondary), 15%, 50%);
+
+  --accent-primary: hsl(var(--hue-primary), 70%, 50%);
+  --accent-primary-hover: hsl(var(--hue-primary), 70%, 45%);
+  --accent-secondary: hsl(var(--hue-secondary), 70%, 45%);
+
+  --border-color: hsl(var(--hue-primary), 20%, 85%);
+  --border-glass: hsla(0, 0%, 0%, 0.05);
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-glow: 0 0 20px hsla(var(--hue-primary), 70%, 50%, 0.1);
+}
