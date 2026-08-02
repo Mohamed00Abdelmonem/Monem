@@ -17,8 +17,8 @@
   --primary: #00f2fe;
   --primary-glow: rgba(0, 242, 254, 0.5);
   --secondary: #00ff88;
-  --secondary-glow: rgba(0, 255, 136, 0.4);
-  --accent-cyan: #00f2fe;
+  /* --secondary-glow: rgba(0, 255, 136, 0.4); */
+  --accent-cyan: #6dc09d;
   --accent-green: #00ff88;
   --accent-purple: #9d50bb;
 

@@ -218,32 +218,54 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ------------------------------------------
-     10. PROJECT FILTERING LOGIC
+     10. PROJECTS SWIPER SLIDER & FILTERING LOGIC
      ------------------------------------------ */
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const projectItems = document.querySelectorAll('.project-item');
-
-  filterBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filter = btn.getAttribute('data-filter');
-
-      projectItems.forEach((item) => {
-        const category = item.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
-          item.style.display = 'flex';
-          item.classList.remove('hidden');
-        } else {
-          item.style.display = 'none';
-          item.classList.add('hidden');
-        }
-      });
-
-      if (typeof AOS !== 'undefined') AOS.refresh();
+  if (typeof Swiper !== 'undefined' && document.querySelector('.projects-swiper')) {
+    const projectsSwiper = new Swiper('.projects-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      grabCursor: true,
+      navigation: {
+        nextEl: '.project-swiper-next',
+        prevEl: '.project-swiper-prev'
+      },
+      pagination: {
+        el: '.project-swiper-pagination',
+        type: 'fraction'
+      },
+      breakpoints: {
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
     });
-  });
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectItems = document.querySelectorAll('.projects-swiper .swiper-slide');
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        projectItems.forEach((item) => {
+          const category = item.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            item.style.display = 'flex';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        projectsSwiper.update();
+        projectsSwiper.slideTo(0);
+
+        if (typeof AOS !== 'undefined') AOS.refresh();
+      });
+    });
+  }
 
   /* ------------------------------------------
      11. CERTIFICATE LIGHTBOX MODAL
