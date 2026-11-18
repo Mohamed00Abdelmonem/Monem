@@ -1,0 +1,10 @@
+{
+  "name": "monem-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio of Mohamed Abdelmonem (Monem) — Software Engineer & Backend Specialist",
+  "scripts": {
+    "dev": "node -e \"const h=require('http'),f=require('fs'),p=require('path'),m={'.html':'text/html','.css':'text/css','.js':'application/javascript','.json':'application/json','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.svg':'image/svg+xml','.webp':'image/webp'};h.createServer((q,s)=>{let u=decodeURIComponent(q.url.split('?')[0]);let fp=p.join(process.cwd(),u==='/'?'index.html':u);if(!f.existsSync(fp)||f.statSync(fp).isDirectory()){s.writeHead(404);return s.end('Not found');}s.writeHead(200,{'Content-Type':m[p.extname(fp).toLowerCase()]||'application/octet-stream'});f.createReadStream(fp).pipe(s)}).listen(5173,()=>console.log('Portfolio running at http://localhost:5173'))\"",
+    "start": "npm run dev"
+  }
+}

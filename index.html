@@ -11,7 +11,7 @@
         content="Mohamed Abdelmonem, Monem, منعم, محمد عبدالمنعم, Backend Developer, Python Developer, Django, DRF, PostgreSQL, Docker, Software Engineer, Portfolio">
     <meta name="author" content="Mohamed Abdelmonem">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#07090e">
+    <meta name="theme-color" content="#05070c">
 
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
@@ -27,7 +27,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- FontAwesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -59,71 +59,153 @@
 
 <body>
 
+    <!-- Awwwards Curved SVG Curtain Preloader (Hero/5) -->
+    <div class="preloader" id="js-preloader" aria-hidden="true">
+        <p class="preloader__word" id="js-word">
+            <span class="preloader__dot"></span>
+            <span id="js-word-text">Hello</span>
+        </p>
+        <svg class="preloader__svg" id="js-svg" preserveAspectRatio="none">
+            <path id="js-path"></path>
+        </svg>
+    </div>
+
     <!-- Top Scroll Progress Indicator -->
     <div id="scroll-progress"></div>
 
-    <!-- Custom Pointer Cursor -->
+    <!-- Custom Dual Pointer Cursor -->
     <div class="custom-cursor-dot"></div>
     <div class="custom-cursor-ring"></div>
 
-    <!-- Dynamic Background Canvas Orbs -->
-    <canvas id="bg-canvas"></canvas>
-
-    <!-- Top Header Avatar & Terminal Navigation (Matching Screenshot) -->
-    <header class="header-wrapper">
-        <div class="container text-center">
-            <!-- Top Centered Avatar Logo -->
-            <div class="brand-avatar-container" data-aos="zoom-in">
-                <a href="#home" class="brand-avatar" aria-label="Home">
-                    <img src="assets/images/me.jpg" alt="Mohamed Abdelmonem Avatar" class="brand-avatar-img">
-                </a>
+    <!-- Awwwards Background 1: Physics Interactive Dot Grid (Background/10) -->
+    <div class="awwwards-bg-layer" aria-hidden="true">
+        <section class="dot-grid" data-dot-grid="" data-dot-size="2.4" data-gap="28"
+            data-proximity="135" data-shock-radius="220" data-shock-strength="4.2"
+            data-resistance="720" data-return-duration="1.35">
+            <div class="dot-grid__wrap">
+                <canvas class="dot-grid__canvas"></canvas>
             </div>
+        </section>
+    </div>
 
-            <!-- Pill Navigation Buttons (Matching Screenshot) -->
-            <nav class="nav-terminal-container" data-aos="fade-down" data-aos-delay="100">
-                <a href="#home" class="nav-terminal-btn active">&gt; HOME</a>
-                <a href="#services" class="nav-terminal-btn">&gt; SERVICES</a>
-                <a href="#resume" class="nav-terminal-btn">&gt; WORK &amp; EXPERIENCE</a>
-                <a href="#projects" class="nav-terminal-btn">&gt; PROJECTS</a>
-                <a href="#extensions" class="nav-terminal-btn">&gt; EXTENSIONS</a>
-                <a href="#contact" class="nav-terminal-btn">CONTACT INFO</a>
-                <a href="https://drive.google.com/file/d/1JRU6Ox0yol8PelMzoc1G5DgOln4F4034/view?usp=sharing"
-                    target="_blank" rel="noopener" class="nav-terminal-btn">DOWNLOAD CV</a>
+    <!-- Awwwards Background 2: WebGL Volumetric Light Rays (Background/1) -->
+    <div class="light-rays" aria-hidden="true" data-color="#38bdf8" data-speed="0.75"
+        data-spread="0.65" data-length="2.4" data-fade="1.1" data-mouse="0.12"></div>
+
+    <!-- Floating Glass Header + Awwwards Expanding Pill Menu (Navigation/2) -->
+    <header class="header-wrapper">
+        <div class="header-bar">
+            <a href="#home" class="brand-cluster" aria-label="Mohamed Abdelmonem Home">
+                <span class="brand-avatar">
+                    <img src="assets/images/me.jpg" alt="Mohamed Abdelmonem Avatar" class="brand-avatar-img">
+                </span>
+                <span class="brand-meta">
+                    <span class="brand-name">monem.dev</span>
+                    <span class="brand-status"><span class="brand-status-dot"></span> Backend Engineer</span>
+                </span>
+            </a>
+
+            <nav class="nav-terminal-container" aria-label="Primary Navigation">
+                <a href="#home" class="nav-terminal-btn active">Home</a>
+                <a href="#services" class="nav-terminal-btn">Services</a>
+                <a href="#resume" class="nav-terminal-btn">Experience</a>
+                <a href="#education" class="nav-terminal-btn">Education</a>
+                <a href="#extensions" class="nav-terminal-btn">Extensions</a>
+                <a href="#certificates" class="nav-terminal-btn">Certificates</a>
             </nav>
+
+            <div class="header-actions">
+                <a href="https://drive.google.com/file/d/1JRU6Ox0yol8PelMzoc1G5DgOln4F4034/view?usp=sharing"
+                    target="_blank" rel="noopener" class="cv-pill-btn">
+                    <i class="fas fa-arrow-down"></i><span>CV</span>
+                </a>
+
+                <!-- Awwwards Expanding Pill Menu (Navigation/2) -->
+                <div class="awwwards-menu-anchor">
+                    <div class="awwwards-menu-panel" id="menuPanel">
+                        <nav class="awwwards-nav" id="awwwardsNav" aria-label="Quick Menu">
+                            <div class="awwwards-nav__list">
+                                <div class="awwwards-nav__link-wrap">
+                                    <a href="#home" class="awwwards-nav__link"><span class="awwwards-nav__num">01</span> Home</a>
+                                </div>
+                                <div class="awwwards-nav__link-wrap">
+                                    <a href="#services" class="awwwards-nav__link"><span class="awwwards-nav__num">02</span> Services</a>
+                                </div>
+                                <div class="awwwards-nav__link-wrap">
+                                    <a href="#skills" class="awwwards-nav__link"><span class="awwwards-nav__num">03</span> Tech Stack</a>
+                                </div>
+                                <div class="awwwards-nav__link-wrap">
+                                    <a href="#resume" class="awwwards-nav__link"><span class="awwwards-nav__num">04</span> Experience</a>
+                                </div>
+                                <div class="awwwards-nav__link-wrap">
+                                    <a href="#education" class="awwwards-nav__link"><span class="awwwards-nav__num">05</span> Education</a>
+                                </div>
+                                <div class="awwwards-nav__link-wrap">
+                                    <a href="#extensions" class="awwwards-nav__link"><span class="awwwards-nav__num">06</span> Extensions</a>
+                                </div>
+                                <div class="awwwards-nav__link-wrap">
+                                    <a href="#certificates" class="awwwards-nav__link"><span class="awwwards-nav__num">07</span> Certificates</a>
+                                </div>
+                            </div>
+
+                            <div class="awwwards-nav__footer">
+                                <a href="https://github.com/Mohamed00Abdelmonem" target="_blank" rel="noopener" class="awwwards-nav__footer-link">GitHub</a>
+                                <a href="https://www.linkedin.com/in/mohamed-abdelmonem-716ba026b/" target="_blank" rel="noopener" class="awwwards-nav__footer-link">LinkedIn</a>
+                                <a href="https://drive.google.com/file/d/1JRU6Ox0yol8PelMzoc1G5DgOln4F4034/view?usp=sharing" target="_blank" rel="noopener" class="awwwards-nav__footer-link">Download CV</a>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <button type="button" class="awwwards-menu-btn" id="menuBtn" aria-expanded="false" aria-controls="awwwardsNav" aria-label="Toggle Menu">
+                        <div class="awwwards-menu-btn__slider" id="btnSlider">
+                            <div class="awwwards-menu-btn__item">
+                                <div class="awwwards-menu-btn__label">
+                                    <span>Menu</span>
+                                    <span>Menu</span>
+                                </div>
+                            </div>
+                            <div class="awwwards-menu-btn__item awwwards-menu-btn__item--close">
+                                <div class="awwwards-menu-btn__label">
+                                    <span>Close</span>
+                                    <span>Close</span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section Terminal Window (Matching Screenshot) -->
-        <section class="section-padding pt-3" id="home">
+        <!-- Hero Section Architectural Terminal -->
+        <section class="hero-section" id="home">
             <div class="container">
-                <div class="terminal-window" data-aos="fade-up" data-aos-delay="200">
-                    <!-- macOS Title Bar -->
+                <div class="terminal-window hero-stagger">
                     <div class="terminal-title-bar">
                         <div class="mac-dots">
                             <span class="mac-dot mac-dot-red"></span>
                             <span class="mac-dot mac-dot-yellow"></span>
                             <span class="mac-dot mac-dot-green"></span>
                         </div>
-                        <div class="terminal-title">monem@macbook-pro: ~</div>
-                        <div></div>
+                        <div class="terminal-title">monem@backend-arch: ~/portfolio</div>
+                        <span class="terminal-badge">ONLINE // EGYPT</span>
                     </div>
 
-                    <!-- Terminal Body Content -->
                     <div class="terminal-body">
-                        <!-- Cyan Vertical Edge Accent Bar -->
                         <div class="terminal-body-accent-bar"></div>
 
-                        <!-- Large Glowing Cyan Headline (Matching Screenshot) -->
-                        <h1 class="terminal-hero-headline">Hello, I'm Mohamed Abdelmonem</h1>
+                        <div class="hero-eyebrow hero-stagger" data-scramble>
+                            <span>// PYTHON • DJANGO • POSTGRESQL • DOCKER</span>
+                        </div>
 
-                        <!-- Neon Green Subtitle (Matching Screenshot) -->
-                        <div class="terminal-hero-subtitle">
+                        <h1 class="terminal-hero-headline hero-stagger">Hello, I'm Mohamed Abdelmonem</h1>
+
+                        <div class="terminal-hero-subtitle hero-stagger">
                             <span>▶</span> <span class="typed-role">Software Engineer &amp; Backend Developer</span>
                         </div>
 
-                        <!-- Bullets with Left Line and Cyan Arrows (Matching Screenshot) -->
-                        <div class="terminal-bullets-wrapper">
+                        <div class="terminal-bullets-wrapper hero-stagger">
                             <div class="terminal-bullet-item">
                                 <span class="terminal-arrow">→</span>
                                 <span class="terminal-bullet-text">Building high-performance backend systems &amp; scalable Django architectures</span>
@@ -142,8 +224,11 @@
                             </div>
                         </div>
 
-                        <!-- Hero Social Links Bar (GitHub & LinkedIn) -->
-                        <div class="terminal-social-bar">
+                        <div class="terminal-social-bar hero-stagger">
+                            <a href="#resume" class="terminal-social-btn terminal-social-btn--primary">
+                                <i class="fas fa-terminal"></i>
+                                <span>Explore Work</span>
+                            </a>
                             <a href="https://github.com/Mohamed00Abdelmonem" target="_blank" rel="noopener" class="terminal-social-btn github-btn">
                                 <i class="fab fa-github"></i>
                                 <span>GitHub</span>
@@ -152,15 +237,41 @@
                                 <i class="fab fa-linkedin"></i>
                                 <span>LinkedIn</span>
                             </a>
+                            <a href="https://drive.google.com/file/d/1JRU6Ox0yol8PelMzoc1G5DgOln4F4034/view?usp=sharing" target="_blank" rel="noopener" class="terminal-social-btn">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Resume / CV</span>
+                            </a>
                         </div>
 
-                        <!-- Terminal Prompt Footer Line -->
-                        <div class="terminal-prompt-line">
+                        <div class="terminal-prompt-line hero-stagger">
                             <span class="terminal-prompt-user">monem@backend-pro:~$</span>
-                            <span>ready to build next-gen software</span>
+                            <span>ready to engineer resilient production systems</span>
                             <span class="blinking-cursor"></span>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Infinite Stack Marquee Ribbon (Hover/4 Inspired) -->
+            <div class="tech-marquee-wrap" aria-hidden="true">
+                <div class="marquee-track">
+                    <span class="marquee-chip"><i class="fab fa-python"></i> Python</span><span class="marquee-dot"></span>
+                    <span class="marquee-chip"><i class="fas fa-code"></i> Django &amp; DRF</span><span class="marquee-dot"></span>
+                    <span class="marquee-chip"><i class="fas fa-database"></i> PostgreSQL</span><span class="marquee-dot"></span>
+                    <span class="marquee-chip"><i class="fab fa-docker"></i> Docker</span><span class="marquee-dot"></span>
+                    <span class="marquee-chip"><i class="fas fa-bolt"></i> Redis &amp; Celery</span><span class="marquee-dot"></span>
+                    <span class="marquee-chip"><i class="fas fa-brain"></i> LLM Integrations</span><span class="marquee-dot"></span>
+                    <span class="marquee-chip"><i class="fab fa-linux"></i> Linux &amp; CI/CD</span><span class="marquee-dot"></span>
+                    <span class="marquee-chip"><i class="fab fa-chrome"></i> Chrome Extensions</span><span class="marquee-dot"></span>
+                    <!-- Duplicate loop for seamless infinite scroll -->
+                    <span class="marquee-chip"><i class="fab fa-python"></i> Python</span><span class="marquee-dot"></span>
+                    <span class="marquee-chip"><i class="fas fa-code"></i> Django &amp; DRF</span><span class="marquee-dot"></span>
+                    <span class="marquee-chip"><i class="fas fa-database"></i> PostgreSQL</span><span class="marquee-dot"></span>
+                    <span class="marquee-chip"><i class="fab fa-docker"></i> Docker</span><span class="marquee-dot"></span>
+                    <span class="marquee-chip"><i class="fas fa-bolt"></i> Redis &amp; Celery</span><span class="marquee-dot"></span>
+                    <span class="marquee-chip"><i class="fas fa-brain"></i> LLM Integrations</span><span class="marquee-dot"></span>
+                    <span class="marquee-chip"><i class="fab fa-linux"></i> Linux &amp; CI/CD</span><span class="marquee-dot"></span>
+                    <span class="marquee-chip"><i class="fab fa-chrome"></i> Chrome Extensions</span><span class="marquee-dot"></span>
                 </div>
             </div>
         </section>
@@ -169,25 +280,25 @@
         <section class="section-padding" id="about">
             <div class="container">
                 <div class="section-header text-center" data-aos="fade-up">
-                    <span class="sub-title">// SYSTEM_STATS</span>
+                    <span class="sub-title" data-scramble>// SYSTEM_STATS</span>
                     <h2 class="main-title">Impact &amp; Achievements</h2>
                 </div>
 
-                <div class="grid grid-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="grid grid-4" data-aos="fade-up" data-aos-delay="80">
                     <div class="card-terminal text-center">
-                        <div class="stat-number">3+</div>
+                        <div class="stat-number" data-count="3" data-suffix="+">3+</div>
                         <div class="stat-label">Enterprise Systems Built</div>
                     </div>
                     <div class="card-terminal text-center">
-                        <div class="stat-number">4</div>
+                        <div class="stat-number" data-count="4" data-suffix="">4</div>
                         <div class="stat-label">Published Extensions</div>
                     </div>
                     <div class="card-terminal text-center">
-                        <div class="stat-number">70%</div>
+                        <div class="stat-number" data-count="70" data-suffix="%">70%</div>
                         <div class="stat-label">Productivity Gain Delivered</div>
                     </div>
                     <div class="card-terminal text-center">
-                        <div class="stat-number">500k+</div>
+                        <div class="stat-number" data-count="500" data-suffix="k+">500k+</div>
                         <div class="stat-label">API Requests Processed</div>
                     </div>
                 </div>
@@ -198,24 +309,24 @@
         <section class="section-padding" id="services">
             <div class="container">
                 <div class="section-header text-center" data-aos="fade-up">
-                    <span class="sub-title">// CORE_SERVICES</span>
+                    <span class="sub-title" data-scramble>// CORE_SERVICES</span>
                     <h2 class="main-title">Engineering Offerings</h2>
                 </div>
 
                 <div class="grid grid-3">
-                    <div class="card-terminal" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-terminal" data-aos="fade-up" data-aos-delay="80">
                         <div class="service-icon"><i class="fas fa-server"></i></div>
                         <h3 class="font-mono text-cyan mb-2">Backend Architecture</h3>
                         <p class="text-secondary">Designing clean, secure, and maintainable Python &amp; Django REST APIs for scalable production applications.</p>
                     </div>
 
-                    <div class="card-terminal" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-terminal" data-aos="fade-up" data-aos-delay="140">
                         <div class="service-icon"><i class="fas fa-database"></i></div>
                         <h3 class="font-mono text-cyan mb-2">Database Engineering</h3>
                         <p class="text-secondary">PostgreSQL schema design, query optimization, indexing, and ORM performance tuning for high data throughput.</p>
                     </div>
 
-                    <div class="card-terminal" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-terminal" data-aos="fade-up" data-aos-delay="200">
                         <div class="service-icon"><i class="fas fa-cubes"></i></div>
                         <h3 class="font-mono text-cyan mb-2">DevOps &amp; Docker</h3>
                         <p class="text-secondary">Streamlining production deployments using Docker, Docker Compose, Git workflows, and Linux cloud servers.</p>
@@ -228,12 +339,12 @@
         <section class="section-padding" id="skills">
             <div class="container">
                 <div class="section-header text-center" data-aos="fade-up">
-                    <span class="sub-title">// TECHNICAL_STACK</span>
+                    <span class="sub-title" data-scramble>// TECHNICAL_STACK</span>
                     <h2 class="main-title">Skills &amp; Competencies</h2>
                 </div>
 
                 <div class="grid grid-3">
-                    <div class="card-terminal" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-terminal" data-aos="fade-up" data-aos-delay="80">
                         <h3 class="font-mono text-green mb-3"><i class="fas fa-code me-2"></i> Backend &amp; Core</h3>
                         <div class="skill-item">
                             <div class="skill-info"><span>Python</span><span class="text-cyan font-mono">90%</span></div>
@@ -249,7 +360,7 @@
                         </div>
                     </div>
 
-                    <div class="card-terminal" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-terminal" data-aos="fade-up" data-aos-delay="140">
                         <h3 class="font-mono text-green mb-3"><i class="fas fa-database me-2"></i> Database &amp; Cloud</h3>
                         <div class="skill-item">
                             <div class="skill-info"><span>PostgreSQL &amp; SQL</span><span class="text-cyan font-mono">88%</span></div>
@@ -265,7 +376,7 @@
                         </div>
                     </div>
 
-                    <div class="card-terminal" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-terminal" data-aos="fade-up" data-aos-delay="200">
                         <h3 class="font-mono text-green mb-3"><i class="fas fa-laptop-code me-2"></i> Frontend &amp; Tools</h3>
                         <div class="skill-item">
                             <div class="skill-info"><span>HTML5, CSS3, JS</span><span class="text-cyan font-mono">85%</span></div>
@@ -288,52 +399,67 @@
         <section class="section-padding" id="resume">
             <div class="container">
                 <div class="section-header text-center" data-aos="fade-up">
-                    <span class="sub-title">// WORK_LOG</span>
+                    <span class="sub-title" data-scramble>// WORK_LOG</span>
                     <h2 class="main-title">Work &amp; Experience</h2>
                 </div>
 
                 <div class="timeline">
-                    <!-- Experience 1 -->
                     <div class="timeline-item" data-aos="fade-up">
                         <div class="timeline-dot"></div>
                         <div class="card-terminal">
-                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                <h3 class="font-mono text-cyan" style="font-size: 1.2rem;">ITI Open Source Trainee</h3>
-                                <span class="font-mono text-green" style="font-size: 0.82rem;">Oct 2025 – Jul 2026</span>
+                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+                                <h3 class="font-mono text-cyan">Software Engineer</h3>
+                                <span class="font-mono text-green" style="font-size: 0.75rem;">Aug 2026 – Present</span>
                             </div>
-                            <div class="text-secondary mb-3">Information Technology Institute (ITI) — Full-time On-site</div>
-                            <p class="text-secondary font-mono" style="font-size: 0.9rem;">
+                            <div class="text-secondary mb-2" style="font-size: 0.82rem;">SELECT — Full-time · Cairo, Egypt (On-site)</div>
+                            <p class="text-secondary font-mono" style="font-size: 0.8rem;">
+                                Building and maintaining production software systems on-site in Cairo as a full-time Software Engineer.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="card-terminal">
+                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+                                <h3 class="font-mono text-cyan">Software Engineer</h3>
+                                <span class="font-mono text-green" style="font-size: 0.75rem;">Jun 2026 – Nov 2026</span>
+                            </div>
+                            <div class="text-secondary mb-2" style="font-size: 0.82rem;">gig — Full-time · Remote</div>
+                            <p class="text-secondary font-mono mb-2" style="font-size: 0.8rem;">
+                                Engineered cross-platform mobile and web solutions in a remote full-time capacity with automated delivery workflows.
+                            </p>
+                            <div>
+                                <span class="tech-badge">React Native</span>
+                                <span class="tech-badge">CI/CD</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="card-terminal">
+                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+                                <h3 class="font-mono text-cyan">ITI Open Source Trainee</h3>
+                                <span class="font-mono text-green" style="font-size: 0.75rem;">Oct 2025 – Jul 2026</span>
+                            </div>
+                            <div class="text-secondary mb-2" style="font-size: 0.82rem;">Information Technology Institute (ITI) — Full-time On-site</div>
+                            <p class="text-secondary font-mono" style="font-size: 0.8rem;">
                                 Specialized 9-month professional program covering advanced backend software engineering, Linux system management, database architecture, and cloud deployment pipelines.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Experience 2 -->
                     <div class="timeline-item" data-aos="fade-up">
                         <div class="timeline-dot"></div>
                         <div class="card-terminal">
-                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                <h3 class="font-mono text-cyan" style="font-size: 1.2rem;">Backend Developer</h3>
-                                <span class="font-mono text-green" style="font-size: 0.82rem;">Jan 2025 – Mar 2025</span>
+                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+                                <h3 class="font-mono text-cyan">Backend Developer</h3>
+                                <span class="font-mono text-green" style="font-size: 0.75rem;">Jan 2025 – Mar 2025</span>
                             </div>
-                            <div class="text-secondary mb-3">Tnzeem — Full-time On-site</div>
-                            <p class="text-secondary font-mono" style="font-size: 0.9rem;">
+                            <div class="text-secondary mb-2" style="font-size: 0.82rem;">Tnzeem — Full-time On-site</div>
+                            <p class="text-secondary font-mono" style="font-size: 0.8rem;">
                                 Developed core REST API features, handled database operations, optimized SQL queries, and maintained live production backend systems.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Experience 3 -->
-                    <div class="timeline-item" data-aos="fade-up">
-                        <div class="timeline-dot"></div>
-                        <div class="card-terminal">
-                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                <h3 class="font-mono text-cyan" style="font-size: 1.2rem;">Management Information Systems (MIS)</h3>
-                                <span class="font-mono text-green" style="font-size: 0.82rem;">2021 – 2025</span>
-                            </div>
-                            <div class="text-secondary mb-3">MET University — Graduated with Honors (Excellent)</div>
-                            <p class="text-secondary font-mono" style="font-size: 0.9rem;">
-                                Graduated with highest academic honors. Focused on enterprise software development, database engineering, and system design principles.
                             </p>
                         </div>
                     </div>
@@ -341,199 +467,26 @@
             </div>
         </section>
 
-        <!-- Projects Showcase -->
-        <section class="section-padding" id="projects">
+        <!-- Education Section -->
+        <section class="section-padding" id="education">
             <div class="container">
                 <div class="section-header text-center" data-aos="fade-up">
-                    <span class="sub-title">// PORTFOLIO_REPOS</span>
-                    <h2 class="main-title">Featured Projects</h2>
+                    <span class="sub-title" data-scramble>// ACADEMIC_BACKGROUND</span>
+                    <h2 class="main-title">Education</h2>
                 </div>
 
-                <!-- Filter Controls -->
-                <div class="project-filters" data-aos="fade-up">
-                    <button class="filter-btn active" data-filter="all">All Repositories</button>
-                    <button class="filter-btn" data-filter="backend">Backend</button>
-                    <button class="filter-btn" data-filter="frontend">Frontend</button>
-                </div>
-
-                <!-- Projects Swiper Slider Container -->
-                <div class="projects-slider-wrapper" data-aos="fade-up" data-aos-delay="100">
-                    <div class="swiper projects-swiper">
-                        <div class="swiper-wrapper">
-                            <!-- Project 1: Ray -->
-                            <div class="swiper-slide project-item" data-category="backend">
-                                <article class="project-card">
-                                    <div class="project-media">
-                                        <img src="assets/images/projects/projects/new/ray.png" alt="Ray Platform Screenshot">
-                                        <span class="project-tag">ENTERPRISE_SYSTEM</span>
-                                    </div>
-                                    <div class="project-body">
-                                        <h3 class="project-title">Ray Platform</h3>
-                                        <p class="project-desc">Enterprise construction business management system built with Django workflow automation, quotations, and custom dashboards.</p>
-                                        <div class="mb-3">
-                                            <span class="tech-badge">Python</span>
-                                            <span class="tech-badge">Django</span>
-                                            <span class="tech-badge">PostgreSQL</span>
-                                        </div>
-                                        <div class="d-flex gap-2 mt-auto">
-                                            <a href="http://rayconstraction.com/" target="_blank" rel="noopener" class="nav-terminal-btn active-cyan flex-grow-1 text-center">
-                                                <span>Live Site</span> <i class="fas fa-external-link-alt ms-1"></i>
-                                            </a>
-                                            <a href="https://github.com/Mohamed00Abdelmonem" target="_blank" rel="noopener" class="nav-terminal-btn" aria-label="GitHub Repository">
-                                                <i class="fab fa-github"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </article>
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="card-terminal">
+                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+                                <h3 class="font-mono text-cyan"><i class="fas fa-graduation-cap me-2"></i>Management Information Systems (MIS)</h3>
+                                <span class="font-mono text-green" style="font-size: 0.75rem;">2021 – 2025</span>
                             </div>
-
-                            <!-- Project 2: University LMS -->
-                            <div class="swiper-slide project-item" data-category="backend">
-                                <article class="project-card">
-                                    <div class="project-media">
-                                        <img src="assets/images/projects/projects/new/univirstay.png" alt="University LMS Screenshot">
-                                        <span class="project-tag">ENTERPRISE_LMS</span>
-                                    </div>
-                                    <div class="project-body">
-                                        <h3 class="project-title">University LMS System</h3>
-                                        <p class="project-desc">LMS platform supporting structured content delivery, administrative control flows, and student progress tracking.</p>
-                                        <div class="mb-3">
-                                            <span class="tech-badge">Python</span>
-                                            <span class="tech-badge">Django</span>
-                                            <span class="tech-badge">DRF</span>
-                                        </div>
-                                        <div class="d-flex gap-2 mt-auto">
-                                            <a href="https://ium-lms.fakehtech.com/" target="_blank" rel="noopener" class="nav-terminal-btn active-cyan flex-grow-1 text-center">
-                                                <span>Live Site</span> <i class="fas fa-external-link-alt ms-1"></i>
-                                            </a>
-                                            <a href="https://github.com/Mohamed00Abdelmonem" target="_blank" rel="noopener" class="nav-terminal-btn" aria-label="GitHub Repository">
-                                                <i class="fab fa-github"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-
-                            <!-- Project 3: Sanad AI -->
-                            <div class="swiper-slide project-item" data-category="backend">
-                                <article class="project-card">
-                                    <div class="project-media">
-                                        <img src="assets/images/projects/projects/new/met.png" alt="Sanad AI Screenshot">
-                                        <span class="project-tag">AI_PLATFORM</span>
-                                    </div>
-                                    <div class="project-body">
-                                        <h3 class="project-title">Sanad AI Support Platform</h3>
-                                        <p class="project-desc">AI-powered support and autism insight platform integrating LLM agents, real-time messaging, and analytical insights.</p>
-                                        <div class="mb-3">
-                                            <span class="tech-badge">Python</span>
-                                            <span class="tech-badge">Django</span>
-                                            <span class="tech-badge">LLM Agent</span>
-                                        </div>
-                                        <a href="https://github.com/Mohamed00Abdelmonem/Graduation-Project" target="_blank" rel="noopener" class="nav-terminal-btn active-cyan mt-auto text-center">
-                                            <i class="fab fa-github me-1"></i> Repository
-                                        </a>
-                                    </div>
-                                </article>
-                            </div>
-
-                            <!-- Project 4: Dj-Abjadi -->
-                            <div class="swiper-slide project-item" data-category="backend">
-                                <article class="project-card">
-                                    <div class="project-media">
-                                        <img src="assets/images/projects/projects/new/abjadi.png" alt="Dj-Abjadi Screenshot">
-                                        <span class="project-tag">AI_EDUCATION</span>
-                                    </div>
-                                    <div class="project-body">
-                                        <h3 class="project-title">Dj-Abjadi Educational Platform</h3>
-                                        <p class="project-desc">Interactive educational backend leveraging AI and Django for structured learning delivery and student assessment.</p>
-                                        <div class="mb-3">
-                                            <span class="tech-badge">Python</span>
-                                            <span class="tech-badge">Django</span>
-                                            <span class="tech-badge">REST API</span>
-                                        </div>
-                                        <a href="https://github.com/Mohamed00Abdelmonem/Dj-abjadi" target="_blank" rel="noopener" class="nav-terminal-btn active-cyan mt-auto text-center">
-                                            <i class="fab fa-github me-1"></i> Repository
-                                        </a>
-                                    </div>
-                                </article>
-                            </div>
-
-                            <!-- Project 5: E-Commerce API -->
-                            <div class="swiper-slide project-item" data-category="backend">
-                                <article class="project-card">
-                                    <div class="project-media">
-                                        <img src="assets/images/projects/projects/new/ecommerce.png" alt="E-Commerce API Screenshot">
-                                        <span class="project-tag">REST_API</span>
-                                    </div>
-                                    <div class="project-body">
-                                        <h3 class="project-title">E-Commerce REST API</h3>
-                                        <p class="project-desc">Scalable e-commerce backend API featuring order processing, JWT authentication, payment integration, and product catalogs.</p>
-                                        <div class="mb-3">
-                                            <span class="tech-badge">Python</span>
-                                            <span class="tech-badge">Django REST</span>
-                                            <span class="tech-badge">PostgreSQL</span>
-                                        </div>
-                                        <a href="https://github.com/Mohamed00Abdelmonem" target="_blank" rel="noopener" class="nav-terminal-btn active-cyan mt-auto text-center">
-                                            <i class="fab fa-github me-1"></i> Repository
-                                        </a>
-                                    </div>
-                                </article>
-                            </div>
-
-                            <!-- Project 6: Tanzeem Engine -->
-                            <div class="swiper-slide project-item" data-category="backend">
-                                <article class="project-card">
-                                    <div class="project-media">
-                                        <img src="assets/images/projects/projects/new/tnzeem.png" alt="Tanzeem Screenshot">
-                                        <span class="project-tag">WORKFLOW_ENGINE</span>
-                                    </div>
-                                    <div class="project-body">
-                                        <h3 class="project-title">Tanzeem Task Engine</h3>
-                                        <p class="project-desc">Task management and workflow automation platform for team coordination, role permissions, and real-time task tracking.</p>
-                                        <div class="mb-3">
-                                            <span class="tech-badge">Python</span>
-                                            <span class="tech-badge">Django</span>
-                                            <span class="tech-badge">Redis</span>
-                                        </div>
-                                        <a href="https://github.com/Mohamed00Abdelmonem" target="_blank" rel="noopener" class="nav-terminal-btn active-cyan mt-auto text-center">
-                                            <i class="fab fa-github me-1"></i> Repository
-                                        </a>
-                                    </div>
-                                </article>
-                            </div>
-
-                            <!-- Project 7: Cyberpunk Portfolio Web Client -->
-                            <div class="swiper-slide project-item" data-category="frontend">
-                                <article class="project-card">
-                                    <div class="project-media">
-                                        <img src="assets/images/projects/projects/new/ray-new.png" alt="Terminal Web Client Screenshot">
-                                        <span class="project-tag">WEB_CLIENT</span>
-                                    </div>
-                                    <div class="project-body">
-                                        <h3 class="project-title">Cyberpunk Web Portfolio</h3>
-                                        <p class="project-desc">High-performance terminal-themed web portfolio featuring modern CSS tokens, custom dual cursor, and Lenis smooth scrolling.</p>
-                                        <div class="mb-3">
-                                            <span class="tech-badge">HTML5</span>
-                                            <span class="tech-badge">CSS3</span>
-                                            <span class="tech-badge">JavaScript</span>
-                                        </div>
-                                        <a href="https://github.com/Mohamed00Abdelmonem" target="_blank" rel="noopener" class="nav-terminal-btn active-cyan mt-auto text-center">
-                                            <i class="fab fa-github me-1"></i> Repository
-                                        </a>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-
-                        <!-- Slider Controls Navigation -->
-                        <div class="slider-controls-wrapper d-flex justify-content-center align-items-center gap-3 mt-4">
-                            <button class="slider-btn project-swiper-prev" aria-label="Previous Slide">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <div class="project-swiper-pagination font-mono text-cyan"></div>
-                            <button class="slider-btn project-swiper-next" aria-label="Next Slide">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
+                            <div class="text-secondary mb-2" style="font-size: 0.82rem;">MET University — Graduated with Honors (Excellent)</div>
+                            <p class="text-secondary font-mono" style="font-size: 0.8rem;">
+                                Graduated with highest academic honors. Focused on enterprise software development, database engineering, and system design principles.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -544,45 +497,45 @@
         <section class="section-padding" id="extensions">
             <div class="container">
                 <div class="section-header text-center" data-aos="fade-up">
-                    <span class="sub-title">// BROWSER_PLUGINS</span>
+                    <span class="sub-title" data-scramble>// BROWSER_PLUGINS</span>
                     <h2 class="main-title">Published Extensions</h2>
                 </div>
 
                 <div class="grid grid-2">
-                    <div class="extension-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="extension-card" data-aos="fade-up" data-aos-delay="80">
                         <img src="assets/images/extentions/taqwa.png" alt="Taqwa Extension" class="extension-icon">
                         <div class="flex-grow-1">
-                            <h3 class="font-mono text-cyan" style="font-size: 1.1rem;">Taqwa | تَقْوَى</h3>
-                            <p class="text-secondary" style="font-size: 0.88rem;">Islamic companion extension providing prayer times, Quran radio, azkar, and location reminders.</p>
+                            <h3 class="font-mono text-cyan" style="font-size: 0.94rem;">Taqwa | تَقْوَى</h3>
+                            <p class="text-secondary" style="font-size: 0.8rem;">Islamic companion extension providing prayer times, Quran radio, azkar, and location reminders.</p>
                         </div>
-                        <a href="https://chromewebstore.google.com/detail/bdnnoikhcglncgbbhmmledikibkgcial" target="_blank" rel="noopener" class="nav-terminal-btn active-cyan">Store Page</a>
+                        <a href="https://chromewebstore.google.com/detail/bdnnoikhcglncgbbhmmledikibkgcial" target="_blank" rel="noopener" class="nav-terminal-btn active-cyan">Store</a>
+                    </div>
+
+                    <div class="extension-card" data-aos="fade-up" data-aos-delay="120">
+                        <img src="assets/images/extentions/jot.png" alt="Jot Extension" class="extension-icon">
+                        <div class="flex-grow-1">
+                            <h3 class="font-mono text-cyan" style="font-size: 0.94rem;">Jot Note Taker</h3>
+                            <p class="text-secondary" style="font-size: 0.8rem;">Productivity extension capturing thoughts, code snippets, and quick reminders instantly.</p>
+                        </div>
+                        <a href="https://chromewebstore.google.com/detail/jot/kpkipdaflidhjapflmnooapbjkkimicj" target="_blank" rel="noopener" class="nav-terminal-btn active-cyan">Store</a>
+                    </div>
+
+                    <div class="extension-card" data-aos="fade-up" data-aos-delay="160">
+                        <img src="assets/images/extentions/coffee%20break.png" alt="Coffee Break Extension" class="extension-icon">
+                        <div class="flex-grow-1">
+                            <h3 class="font-mono text-cyan" style="font-size: 0.94rem;">Coffee Break</h3>
+                            <p class="text-secondary" style="font-size: 0.8rem;">Wellness extension encouraging healthy screen habits with smart break reminders and relaxing tools.</p>
+                        </div>
+                        <a href="https://github.com/Mohamed00Abdelmonem" target="_blank" rel="noopener" class="nav-terminal-btn active-cyan">Details</a>
                     </div>
 
                     <div class="extension-card" data-aos="fade-up" data-aos-delay="200">
-                        <img src="assets/images/extentions/jot.png" alt="Jot Extension" class="extension-icon">
-                        <div class="flex-grow-1">
-                            <h3 class="font-mono text-cyan" style="font-size: 1.1rem;">Jot Note Taker</h3>
-                            <p class="text-secondary" style="font-size: 0.88rem;">Productivity extension capturing thoughts, code snippets, and quick reminders instantly.</p>
-                        </div>
-                        <a href="https://chromewebstore.google.com/detail/jot/kpkipdaflidhjapflmnooapbjkkimicj" target="_blank" rel="noopener" class="nav-terminal-btn active-cyan">Store Page</a>
-                    </div>
-
-                    <div class="extension-card" data-aos="fade-up" data-aos-delay="300">
-                        <img src="assets/images/extentions/coffee%20break.png" alt="Coffee Break Extension" class="extension-icon">
-                        <div class="flex-grow-1">
-                            <h3 class="font-mono text-cyan" style="font-size: 1.1rem;">Coffee Break</h3>
-                            <p class="text-secondary" style="font-size: 0.88rem;">Wellness extension encouraging healthy screen habits with smart break reminders and relaxing tools.</p>
-                        </div>
-                        <a href="https://github.com/Mohamed00Abdelmonem" target="_blank" rel="noopener" class="nav-terminal-btn active-cyan">View Details</a>
-                    </div>
-
-                    <div class="extension-card" data-aos="fade-up" data-aos-delay="400">
                         <img src="assets/images/extentions/EgyTranslat.png" alt="EgyTranslate Extension" class="extension-icon">
                         <div class="flex-grow-1">
-                            <h3 class="font-mono text-cyan" style="font-size: 1.1rem;">EgyTranslate</h3>
-                            <p class="text-secondary" style="font-size: 0.88rem;">Translation &amp; language utility extension for instant web text translation and quick reference.</p>
+                            <h3 class="font-mono text-cyan" style="font-size: 0.94rem;">EgyTranslate</h3>
+                            <p class="text-secondary" style="font-size: 0.8rem;">Translation &amp; language utility extension for instant web text translation and quick reference.</p>
                         </div>
-                        <a href="https://github.com/Mohamed00Abdelmonem" target="_blank" rel="noopener" class="nav-terminal-btn active-cyan">View Details</a>
+                        <a href="https://github.com/Mohamed00Abdelmonem" target="_blank" rel="noopener" class="nav-terminal-btn active-cyan">Details</a>
                     </div>
                 </div>
             </div>
@@ -592,29 +545,29 @@
         <section class="section-padding" id="certificates">
             <div class="container">
                 <div class="section-header text-center" data-aos="fade-up">
-                    <span class="sub-title">// CREDENTIALS</span>
+                    <span class="sub-title" data-scramble>// CREDENTIALS</span>
                     <h2 class="main-title">Certificates</h2>
                 </div>
 
                 <div class="grid grid-4">
-                    <div class="card-terminal text-center cert-card" data-img="assets/certificate/agile.png" data-aos="fade-up" data-aos-delay="100">
-                        <img src="assets/certificate/agile.png" alt="Agile Certificate" style="width:100%; border-radius: 8px; margin-bottom: 10px;">
-                        <span class="font-mono text-cyan" style="font-size: 0.85rem;">Agile Principles</span>
+                    <div class="card-terminal text-center cert-card" data-img="assets/certificate/agile.png" data-aos="fade-up" data-aos-delay="80">
+                        <img src="assets/certificate/agile.png" alt="Agile Certificate">
+                        <span class="font-mono text-cyan" style="font-size: 0.78rem;">Agile Principles</span>
                     </div>
 
-                    <div class="card-terminal text-center cert-card" data-img="assets/images/certificate/java.png" data-aos="fade-up" data-aos-delay="200">
-                        <img src="assets/images/certificate/java.png" alt="Java Certificate" style="width:100%; border-radius: 8px; margin-bottom: 10px;">
-                        <span class="font-mono text-cyan" style="font-size: 0.85rem;">Java Engineering</span>
+                    <div class="card-terminal text-center cert-card" data-img="assets/images/certificate/java.png" data-aos="fade-up" data-aos-delay="120">
+                        <img src="assets/images/certificate/java.png" alt="Java Certificate">
+                        <span class="font-mono text-cyan" style="font-size: 0.78rem;">Java Engineering</span>
                     </div>
 
-                    <div class="card-terminal text-center cert-card" data-img="assets/certificate/Screenshot 2026-04-18 182553.png" data-aos="fade-up" data-aos-delay="300">
-                        <img src="assets/certificate/Screenshot 2026-04-18 182553.png" alt="Achievement Certificate" style="width:100%; border-radius: 8px; margin-bottom: 10px;">
-                        <span class="font-mono text-cyan" style="font-size: 0.85rem;">Professional Training</span>
+                    <div class="card-terminal text-center cert-card" data-img="assets/certificate/Screenshot 2026-04-18 182553.png" data-aos="fade-up" data-aos-delay="160">
+                        <img src="assets/certificate/Screenshot 2026-04-18 182553.png" alt="Achievement Certificate">
+                        <span class="font-mono text-cyan" style="font-size: 0.78rem;">Professional Training</span>
                     </div>
 
-                    <div class="card-terminal text-center cert-card" data-img="assets/certificate/Screenshot 2026-04-18 182636.png" data-aos="fade-up" data-aos-delay="400">
-                        <img src="assets/certificate/Screenshot 2026-04-18 182636.png" alt="Technical Achievement" style="width:100%; border-radius: 8px; margin-bottom: 10px;">
-                        <span class="font-mono text-cyan" style="font-size: 0.85rem;">Technical Mastery</span>
+                    <div class="card-terminal text-center cert-card" data-img="assets/certificate/Screenshot 2026-04-18 182636.png" data-aos="fade-up" data-aos-delay="200">
+                        <img src="assets/certificate/Screenshot 2026-04-18 182636.png" alt="Technical Achievement">
+                        <span class="font-mono text-cyan" style="font-size: 0.78rem;">Technical Mastery</span>
                     </div>
                 </div>
             </div>
@@ -627,46 +580,6 @@
                 <img id="lightbox-img" src="" alt="Certificate Lightbox" class="lightbox-img">
             </div>
         </div>
-
-        <!-- Contact Section -->
-        <section class="section-padding" id="contact">
-            <div class="container">
-                <div class="section-header text-center" data-aos="fade-up">
-                    <span class="sub-title">// CONTACT_SHELL</span>
-                    <h2 class="main-title">Get In Touch</h2>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-10" data-aos="fade-up">
-                        <div class="grid grid-2">
-                            <div class="card-terminal">
-                                <div class="text-muted font-mono" style="font-size: 0.8rem;">EMAIL_ADDRESS</div>
-                                <a href="mailto:mmohamedabdelm@gmail.com" class="font-mono text-cyan" style="font-size: 1.05rem; font-weight: bold;">mmohamedabdelm@gmail.com</a>
-                            </div>
-                            <div class="card-terminal">
-                                <div class="text-muted font-mono" style="font-size: 0.8rem;">PHONE_WHATSAPP</div>
-                                <a href="https://wa.me/201026120743" target="_blank" rel="noopener" class="font-mono text-green" style="font-size: 1.05rem; font-weight: bold;">+20 102 612 0743</a>
-                            </div>
-                            <div class="card-terminal">
-                                <div class="text-muted font-mono" style="font-size: 0.8rem;">LOCATION</div>
-                                <div class="font-mono text-primary" style="font-size: 1rem;">Egypt (Remote / On-site)</div>
-                            </div>
-                            <div class="card-terminal">
-                                <div class="text-muted font-mono mb-2" style="font-size: 0.8rem;">CONNECT_PROFILES</div>
-                                <div class="d-flex gap-2 flex-wrap">
-                                    <a href="https://github.com/Mohamed00Abdelmonem" target="_blank" rel="noopener" class="terminal-social-btn github-btn py-2 px-3">
-                                        <i class="fab fa-github"></i> <span>GitHub</span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/mohamed-abdelmonem-716ba026b/" target="_blank" rel="noopener" class="terminal-social-btn linkedin-btn py-2 px-3">
-                                        <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
@@ -676,12 +589,12 @@
                 <a href="https://github.com/Mohamed00Abdelmonem" target="_blank" rel="noopener" class="text-white fs-5" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/mohamed-abdelmonem-716ba026b/" target="_blank" rel="noopener" style="color: #0077b5;" class="fs-5" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/mohamed-abdelmonem-716ba026b/" target="_blank" rel="noopener" style="color: #38bdf8;" class="fs-5" aria-label="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </div>
             <div>
-                &copy; 2026 <strong>Mohamed Abdelmonem</strong>
+                &copy; 2026 <strong>Mohamed Abdelmonem</strong> &mdash; Engineered with precision
             </div>
         </div>
     </footer>
@@ -701,7 +614,8 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
 
-    <!-- Main JS -->
+    <!-- Awwwards Pack FX & Main JS -->
+    <script src="assets/js/awwwards-fx.js"></script>
     <script src="assets/js/main.js"></script>
 
 </body>
